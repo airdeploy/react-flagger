@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flagger react tests FlagSwitch tests Flag accepts entity prop 1`] = `"Variation 1"`;
+
+exports[`Flagger react tests FlagSwitch tests Flag can inherit flag prop from FlagSwitch 1`] = `"On!"`;
+
+exports[`Flagger react tests FlagSwitch tests Flag can override flag prop from FlagSwitch 1`] = `"Default"`;
+
+exports[`Flagger react tests FlagSwitch tests FlagSwitch accepts entity prop 1`] = `"On!"`;
+
+exports[`Flagger react tests withFlag tests withFlag adds flags.<name>.enabled property 1`] = `
+<div>
+  true
+</div>
+`;
+
+exports[`Flagger react tests withFlag tests withFlag adds flags.<name>.isSampled property 1`] = `
+<div>
+  false
+</div>
+`;
+
+exports[`Flagger react tests withFlag tests withFlag adds flags.<name>.payload property 1`] = `
+<div>
+  {"a":"b"}
+</div>
+`;
+
+exports[`Flagger react tests withFlag tests withFlag adds flags.<name>.variation property 1`] = `
+<div>
+  on
+</div>
+`;
+
+exports[`Flagger react tests withFlag tests withFlag wrapped components accept entity prop 1`] = `
+<div>
+  true
+</div>
+`;
+
+exports[`Flagger react tests withFlag tests withFlag wrapped components handles invalid flag name 1`] = `
+<div>
+  false
+</div>
+`;
