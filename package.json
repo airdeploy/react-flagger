@@ -1,12 +1,12 @@
 {
-  "name": "react-flagger",
+  "name": "flagger-react",
   "version": "3.0.0",
-  "description": "React wrapper for Flagger",
+  "description": "An open source Go SDK for feature flagging (feature gating, feature toggles)",
   "main": "dist/react.js",
   "types": "./types",
   "repository": {
     "type": "git",
-    "url": "https://github.com/airdeploy/react-flagger.git"
+    "url": "https://github.com/airdeploy/flagger-react.git"
   },
   "scripts": {
     "prebuild": "rimraf dist/* types/* && yarn lint",
