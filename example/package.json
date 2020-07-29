@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "flagger-react": "^3.0.1",
     "nock": "^12.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "silver-edge": "3.0.0",
     "react-scripts": "3.0.1"
   },
   "scripts": {

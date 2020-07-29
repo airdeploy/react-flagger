@@ -49,11 +49,11 @@ export class FlagProvider extends React.Component<
     if (this.props.entity) {
       Flagger.setEntity(this.props.entity)
     }
-    this.setState({loading: false})
   }
 
   public async componentDidMount() {
     if (Flagger.isConfigured()) {
+      this.setState({loading: false})
       return
     }
 
@@ -72,26 +72,24 @@ export function withFlag(
 ) {
   // tslint:disable-next-line: max-classes-per-file
   return class FlaggedComponent extends React.Component<{entity?: IEntity}> {
+    state = {
+      flags: this.reduceFlagNames(),
+    }
+
+    public updateFlags = () => {
+      this.setState({flags: this.reduceFlagNames()})
+    }
+
     public componentDidMount() {
-      Flagger.addFlaggerConfigUpdateListener(() => {
-        this.forceUpdate()
-      })
+      Flagger.addFlaggerConfigUpdateListener(this.updateFlags)
     }
 
     public componentWillUnmount() {
-      Flagger.removeFlaggerConfigUpdateListener(() => {
-        this.forceUpdate()
-      })
+      Flagger.removeFlaggerConfigUpdateListener(this.updateFlags)
     }
 
-    public render() {
-      if (flagNames.length === 0) {
-        // tslint:disable-next-line: no-console
-        console.warn('withFlag did not receive a valid flag name')
-        return <WrappedComponent flags={{}} {...this.props} />
-      }
-
-      const flags = flagNames.reduce((reducedFlags, flagName) => {
+    public reduceFlagNames() {
+      return flagNames.reduce((reducedFlags, flagName) => {
         const enabled = Flagger.isEnabled(flagName, this.props.entity)
         const isSampled = Flagger.isSampled(flagName, this.props.entity)
         const variation = Flagger.getVariation(flagName, this.props.entity)
@@ -107,8 +105,15 @@ export function withFlag(
           },
         }
       }, {})
+    }
 
-      return <WrappedComponent flags={flags} {...this.props} />
+    public render() {
+      if (flagNames.length === 0) {
+        // tslint:disable-next-line: no-console
+        console.warn('withFlag did not receive a valid flag name')
+        return <WrappedComponent flags={{}} {...this.props} />
+      }
+      return <WrappedComponent flags={this.state.flags} {...this.props} />
     }
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 
-import {FlagProvider, Flag, FlagSwitch} from 'silver-edge'
+import {FlagProvider, Flag, FlagSwitch} from 'flagger-react'
 
 const user = {id: '37024558'} // type:User injected by Flagger if type is not provided
 
@@ -23,16 +23,19 @@ function App() {
           sseURL={sseURL}
           ingestionURL={ingestionURL}
           logLevel={'debug'}>
-          <FlagSwitch flag="color-theme">
+          <FlagSwitch flag="test">
             <Flag case="blue">
-              <div>Variation is blue</div>
+              <div>The variation is blue</div>
             </Flag>
 
             <Flag case="green">
-              <div>This flag is green</div>
+              <div>The variation is green</div>
             </Flag>
             <Flag case="red">
-              <div>This flag is red</div>
+              <div>The variation is red</div>
+            </Flag>
+            <Flag case="off">
+              <div>This flag is off</div>
             </Flag>
           </FlagSwitch>
         </FlagProvider>

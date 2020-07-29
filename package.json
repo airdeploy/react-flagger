@@ -1,6 +1,6 @@
 {
   "name": "flagger-react",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "An open source React SDK for feature flagging (feature gating, feature toggles)",
   "main": "dist/react.js",
   "types": "./types",
@@ -17,7 +17,7 @@
   "author": "engineering@airdeploy.io",
   "license": "MIT",
   "dependencies": {
-    "flagger": "3.0.0",
+    "flagger": "3.0.1",
     "react": "^16.13.1"
   },
   "devDependencies": {
@@ -29,11 +29,12 @@
     "@types/react": "^16.9.25",
     "@types/react-test-renderer": "^16.9.2",
     "husky": "^4.2.3",
-    "jest": "^24.8.0",
+    "jest": "^25.5.4",
     "nock": "^12.0.3",
     "prettier": "^2.0.2",
     "pretty-quick": "^2.0.1",
     "react-test-renderer": "^16.13.1",
+    "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rollup": "^2.1.0",
     "rollup-plugin-node-builtins": "^2.1.2",
