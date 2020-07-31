@@ -62,6 +62,7 @@ export class FlagProvider extends React.Component<
   }
 
   public render() {
+    Flagger.setEntity(this.props.entity)
     return this.state.loading ? this.props.loadingView : this.props.children
   }
 }
