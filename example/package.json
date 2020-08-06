@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "flagger-react": "^3.0.1",
+    "flagger-react": "3.0.4",
     "nock": "^12.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

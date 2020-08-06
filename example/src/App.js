@@ -5,12 +5,6 @@ import {FlagProvider, Flag, FlagSwitch} from 'flagger-react'
 
 const apiKey = 'x17i1t1vf7m374ml' // <--------- CHANGE THIS TO YOUR API KEY
 
-const serverURL = 'https://app.staging.airdeploy.io'
-// sourceURL, sseURL, ingestionURL is not necessary to provide if you are using Airdeploy
-const sourceURL = `${serverURL}/v3/config/` // <--------- CHANGE THIS
-const sseURL = `${serverURL}/v3/sse/` // <--------- CHANGE THIS
-const ingestionURL = `https://flagger-conifig-seed.glitch.me/collector?envKey=${apiKey}` // <--------- CHANGE THIS
-
 class App extends Component {
   state = {
     options: [
@@ -39,6 +33,7 @@ class App extends Component {
 
     const entity = {
       id: value,
+      name: 'Michael',
       attributes: {
         createdAt: '2014-09-20T00:00:00Z',
       },
@@ -56,16 +51,10 @@ class App extends Component {
             </select>
             <h1>ID: {value}</h1>
           </Fragment>
-          <FlagProvider
-            apiKey={apiKey}
-            sourceURL={sourceURL}
-            entity={entity}
-            sseURL={sseURL}
-            ingestionURL={ingestionURL}
-            logLevel={'debug'}>
-            <FlagSwitch flag="test">
-              <Flag case="blue">
-                <div>The variation is blue</div>
+          <FlagProvider apiKey={apiKey} entity={entity} logLevel={'debug'}>
+            <FlagSwitch flag="best-flag-in-history">
+              <Flag case="on">
+                <div>The variation is on</div>
               </Flag>
 
               <Flag case="green">

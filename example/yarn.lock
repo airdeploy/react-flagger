@@ -4273,18 +4273,16 @@ find-up@^2.0.0, find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
-flagger-react@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/flagger-react/-/flagger-react-3.0.1.tgz#4ce1904c64f5ceccd9582f18e436184c4551f285"
-  integrity sha512-oGo5uLPO0FB0D6b3N+lZKvi6b0CDrzArxM1y627r2FrPt/QGk+xqGxYF8OuRAfVCVHDBrxPsy1WMrUG4WHqJqw==
+flagger-react@../:
+  version "3.0.4"
   dependencies:
-    flagger "3.0.0"
+    flagger "3.0.4"
     react "^16.13.1"
 
-flagger@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/flagger/-/flagger-3.0.0.tgz#854a6de5458408c0050ba4b852c16e55c474f23d"
-  integrity sha512-F42jciFp0pSjPLi/BwTD5L5fqarnXxwu1A3nmPl8pDrV8UwK34MeHaSkaQJRtL84EQQLURmVk8yEOpQwfDbC9A==
+flagger@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/flagger/-/flagger-3.0.4.tgz#a2400f0a4c0d122cd7a841c6220613ccbd321ceb"
+  integrity sha512-8RfajFQmni2YTugkUDbRoOV1cJqoRFDmEcXFbUcu3PxVRwyJNk3TNC5io2mP19Uw9sWF2n+yvUPB3T3tXTqWKQ==
   dependencies:
     axios "^0.18.0"
     axios-retry "^3.1.2"
