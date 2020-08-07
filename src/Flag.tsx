@@ -1,5 +1,6 @@
 import {Flagger, IEntity, Logger} from 'flagger'
 import React from 'react'
+import {entityCtx} from './FlagProvider'
 
 const log = new Logger('react/Flag')
 
@@ -23,15 +24,24 @@ export class Flag extends React.Component<IFlag> {
   }
 
   public render() {
-    if (!this.props.flag) {
-      log.warn('<Flag> component missing flag name')
-      return null
-    }
-    const variation = Flagger.getVariation(this.props.flag, this.props.entity)
-    if (variation !== this.props.case) {
-      return null
-    }
-    return this.props.children
+    return (
+      <entityCtx.Consumer>
+        {(entity) => {
+          if (!this.props.flag) {
+            log.warn('<Flag> component missing flag name')
+            return null
+          }
+          const variation = Flagger.getVariation(
+            this.props.flag,
+            this.props.entity || entity
+          )
+          if (variation !== this.props.case) {
+            return null
+          }
+          return this.props.children
+        }}
+      </entityCtx.Consumer>
+    )
   }
 
   private handleChange = () => {

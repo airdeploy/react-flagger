@@ -2019,10 +2019,10 @@ find-versions@^3.2.0:
   dependencies:
     semver-regex "^2.0.0"
 
-flagger@3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/flagger/-/flagger-3.0.4.tgz#a2400f0a4c0d122cd7a841c6220613ccbd321ceb"
-  integrity sha512-8RfajFQmni2YTugkUDbRoOV1cJqoRFDmEcXFbUcu3PxVRwyJNk3TNC5io2mP19Uw9sWF2n+yvUPB3T3tXTqWKQ==
+flagger@3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/flagger/-/flagger-3.0.5.tgz#38c400b5665be4a4b03d50d13818477e1cfbf951"
+  integrity sha512-IAhteCIa5FBgNiQnb472sso5QgqLOiVanxC3x7EaFeV5ZhQNJr2B3Qvb0c5ywiZ13p+gGRg4zLx5elrGdVulQw==
   dependencies:
     axios "^0.18.0"
     axios-retry "^3.1.2"

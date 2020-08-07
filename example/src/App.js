@@ -10,7 +10,7 @@ class App extends Component {
     options: [
       {
         name: 'Select…',
-        value: null,
+        value: '',
       },
       {
         name: '123456',
@@ -21,7 +21,7 @@ class App extends Component {
         value: '654321',
       },
     ],
-    value: '1',
+    value: '',
   }
 
   handleChange = (event) => {
@@ -31,13 +31,15 @@ class App extends Component {
   render() {
     const {options, value} = this.state
 
-    const entity = {
-      id: value,
-      name: 'Michael',
-      attributes: {
-        createdAt: '2014-09-20T00:00:00Z',
-      },
-    }
+    const entity = value
+      ? {
+          id: value,
+          name: 'Michael',
+          attributes: {
+            createdAt: '2014-09-20T00:00:00Z',
+          },
+        }
+      : undefined
     return (
       <div className="App">
         <header className="App-header">

@@ -1,6 +1,8 @@
 import {Flagger, IEntity} from 'flagger'
 import React from 'react'
 
+export const entityCtx = React.createContext<IEntity | undefined>(undefined)
+
 interface IFlagProvider {
   apiKey: string
   sourceURL?: string
@@ -14,6 +16,7 @@ interface IFlagProvider {
 
 interface IFlagProviderState {
   loading: boolean
+  entity: IEntity
 }
 
 export class FlagProvider extends React.Component<
@@ -25,11 +28,22 @@ export class FlagProvider extends React.Component<
     loadingView: null,
   }
 
+  static getDerivedStateFromProps(
+    nextProps: IFlagProvider,
+    prevState: IFlagProviderState
+  ) {
+    if (nextProps.entity !== prevState.entity) {
+      Flagger.setEntity(nextProps.entity)
+    }
+    return {...prevState, entity: nextProps.entity}
+  }
+
   constructor(props: IFlagProvider) {
     super(props)
 
     this.state = {
       loading: !Flagger.isConfigured(),
+      entity: this.props.entity,
     }
   }
 
@@ -62,8 +76,11 @@ export class FlagProvider extends React.Component<
   }
 
   public render() {
-    Flagger.setEntity(this.props.entity)
-    return this.state.loading ? this.props.loadingView : this.props.children
+    return (
+      <entityCtx.Provider value={this.props.entity}>
+        {this.state.loading ? this.props.loadingView : this.props.children}
+      </entityCtx.Provider>
+    )
   }
 }
 
