@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlagSwitch> tests accepts function as children 1`] = `
+<div>
+  {
+  "flag": "example",
+  "variation": "off",
+  "loading": false
+}
+</div>
+`;
+
+exports[`<FlagSwitch> tests accepts react component as "component" prop 1`] = `
+<div>
+  {
+  "flag": "example",
+  "variation": "off",
+  "loading": false
+}
+</div>
+`;
+
+exports[`<FlagSwitch> tests calls "getVariation()" from flaggerCtx 1`] = `
+<div>
+  {
+  "flag": "example",
+  "variation": "on",
+  "loading": false
+}
+</div>
+`;
+
+exports[`<FlagSwitch> tests defaults to entity from flaggerCtx 1`] = `
+<div>
+  {
+  "entity": {
+    "id": "42"
+  },
+  "flag": "example",
+  "variation": "on",
+  "loading": false
+}
+</div>
+`;
+
+exports[`<FlagSwitch> tests filters children that has prop "case" equal to current flag variation 1`] = `
+Array [
+  <div>
+    {
+  "case": "red",
+  "other": "prop 1",
+  "isSwitchChild": true,
+  "entity": {
+    "id": "9001"
+  },
+  "flag": "color",
+  "variation": "red",
+  "loading": false
+}
+  </div>,
+  <div>
+    {
+  "case": "red",
+  "other": "prop 1.2",
+  "isSwitchChild": true,
+  "entity": {
+    "id": "9001"
+  },
+  "flag": "color",
+  "variation": "red",
+  "loading": false
+}
+  </div>,
+]
+`;
+
+exports[`<FlagSwitch> tests gets "loading" from flaggerCtx 1`] = `
+<div>
+  {
+  "flag": "example",
+  "variation": "off",
+  "loading": true
+}
+</div>
+`;
+
+exports[`<FlagSwitch> tests uses entity from prop "entity" if provided 1`] = `
+<div>
+  {
+  "entity": {
+    "id": "9001"
+  },
+  "flag": "example",
+  "variation": "on",
+  "loading": false
+}
+</div>
+`;

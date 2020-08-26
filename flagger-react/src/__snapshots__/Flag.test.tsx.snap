@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flag.ts tests <Flag> tests accepts function as children 1`] = `
+<div>
+  {
+  "case": "on",
+  "flag": "example"
+}
+</div>
+`;
+
+exports[`Flag.ts tests <Flag> tests accepts react component as prop "component" 1`] = `
+<div>
+  {
+  "case": "off",
+  "flag": "example"
+}
+</div>
+`;
+
+exports[`Flag.ts tests <Flag> tests logs a warning message and renders null if prop "isSwitchChild" = false AND prop "flag" is undefined 1`] = `null`;
+
+exports[`Flag.ts tests <Flag> tests logs a warning message if prop "isSwitchChild" = true AND prop "flag" is undefined 1`] = `
+<div>
+  {
+  "case": "off"
+}
+</div>
+`;
+
+exports[`Flag.ts tests <Flag> tests renders FlagSwitch with single Variation if prop "isSwitchChild" = false AND prop "flag" is provided 1`] = `
+<div>
+  {
+  "case": "off",
+  "flag": "example"
+}
+</div>
+`;
+
+exports[`Flag.ts tests <Flag> tests renders null if neither children nor component prop provided 1`] = `null`;

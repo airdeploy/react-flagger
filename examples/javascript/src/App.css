@@ -1,0 +1,91 @@
+.App {
+  /* text-align: center; */
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: var(--bg-header);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  color: var(--text-header);
+  padding: 10px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.App-header select {
+  font-size: calc(10px + 1.5vmin);
+}
+
+.App-content {
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 10px;
+  font-size: calc(10px + 2vmin);
+  flex-grow: 1;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  --text: #282c34;
+  --text-link: #333333;
+  --text-header: #333333;
+  --bg: #ffffff;
+  --bg-header: #c7c7c7;
+}
+
+.App.dark-mode {
+  --text: #ffffff;
+  --text-link: #ffffff;
+  --text-header: #ffffff;
+  --bg: #151515;
+  --bg-header: #282c34;
+}
+
+nav {
+  background-color: var(--bg-header);
+  color: var(--text-header);
+}
+ul.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul.nav > li > a {
+  display: inline-block;
+  padding: 10px;
+  color: var(--text-link);
+  background-color: #00000030;
+}
+
+ul.nav > li > a.active {
+  background-color: var(--bg);
+}

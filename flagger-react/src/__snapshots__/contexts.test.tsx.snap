@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contexts.ts tests flaggerCtx tests provides default value 1`] = `
+<ul>
+  <li>
+    loading: 
+  </li>
+  <li>
+    getVariation:
+     
+    "off"
+  </li>
+  <li>
+    flagDetails:
+     
+    {
+  "variation": "off",
+  "enabled": false,
+  "isSampled": false,
+  "payload": null
+}
+  </li>
+  <li>
+    entity: 
+  </li>
+  <li>
+    config: 
+  </li>
+</ul>
+`;

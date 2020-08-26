@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hooks.ts tests useFlag() tests does not recalculate results if nothing changes 1`] = `
+<div>
+  {
+  "loading": false,
+  "variation": "some",
+  "enabled": true,
+  "isSampled": true,
+  "payload": {},
+  "codename": "example",
+  "entity": {
+    "id": "2"
+  }
+}
+</div>
+`;
+
+exports[`hooks.ts tests useFlag() tests recalculates results if something changes 1`] = `
+<div>
+  {
+  "loading": false,
+  "variation": "some",
+  "enabled": true,
+  "isSampled": true,
+  "payload": {},
+  "codename": "example",
+  "entity": {
+    "id": "2"
+  }
+}
+</div>
+`;
+
+exports[`hooks.ts tests useFlag() tests uses data from flaggerCtx 1`] = `
+<div>
+  {
+  "loading": false,
+  "variation": "some",
+  "enabled": true,
+  "isSampled": true,
+  "payload": {},
+  "codename": "example",
+  "entity": {
+    "id": "1"
+  }
+}
+</div>
+`;
+
+exports[`hooks.ts tests useFlag() tests uses provided entity 1`] = `
+<div>
+  {
+  "loading": false,
+  "variation": "some",
+  "enabled": true,
+  "isSampled": true,
+  "payload": {},
+  "codename": "example",
+  "entity": {
+    "id": "2"
+  }
+}
+</div>
+`;
+
+exports[`hooks.ts tests useVariation() tests does not recalculate variation if nothing changes 1`] = `
+<div>
+  {
+  "codename": "example",
+  "entity": {
+    "id": "2"
+  },
+  "variation": "some",
+  "loading": false
+}
+</div>
+`;
+
+exports[`hooks.ts tests useVariation() tests recalculates variation if something changes 1`] = `
+<div>
+  {
+  "codename": "example",
+  "entity": {
+    "id": "2"
+  },
+  "variation": "some",
+  "loading": false
+}
+</div>
+`;
+
+exports[`hooks.ts tests useVariation() tests uses data from flaggerCtx 1`] = `
+<div>
+  {
+  "codename": "example",
+  "entity": {
+    "id": "1"
+  },
+  "variation": "hey",
+  "loading": false
+}
+</div>
+`;
+
+exports[`hooks.ts tests useVariation() tests uses provided entity 1`] = `
+<div>
+  {
+  "codename": "example",
+  "entity": {
+    "id": "2"
+  },
+  "variation": "some",
+  "loading": false
+}
+</div>
+`;

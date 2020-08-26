@@ -1,15 +1,18 @@
 {
-  "name": "flagger-react-example",
+  "name": "flagger-react-js-example",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "flagger-react": "3.0.5",
+    "flagger-react": "file:../../flagger-react",
     "nock": "^12.0.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "prestart": "cd ../../flagger-react && yarn build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

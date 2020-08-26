@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Variation.ts tests <Variation> tests accepts function as children 1`] = `
+<div>
+  {
+  "case": "on",
+  "flag": "example"
+}
+</div>
+`;
+
+exports[`Variation.ts tests <Variation> tests accepts react component as prop "component" 1`] = `
+<div>
+  {
+  "case": "off",
+  "flag": "example"
+}
+</div>
+`;
+
+exports[`Variation.ts tests <Variation> tests logs a warning message if prop "flag" is undefined 1`] = `
+<div>
+  {
+  "case": "off"
+}
+</div>
+`;
+
+exports[`Variation.ts tests <Variation> tests renders null if neither children nor component prop provided 1`] = `null`;

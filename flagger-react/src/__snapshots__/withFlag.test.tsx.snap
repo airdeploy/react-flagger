@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withFlag() tests calls getFlagsDetails() from flaggerCtx 1`] = `
+<div>
+  {
+  "loading": false,
+  "flags": {},
+  "entity": {
+    "id": "1"
+  }
+}
+</div>
+`;
+
+exports[`withFlag() tests logs a warning message and renders wrapped component with empty flags prop if no flags provided 1`] = `
+<div>
+  {
+  "loading": false,
+  "flags": {},
+  "entity": {
+    "id": "1"
+  }
+}
+</div>
+`;
+
+exports[`withFlag() tests prop entity overrides default one 1`] = `
+<div>
+  {
+  "loading": false,
+  "flags": {},
+  "entity": {
+    "id": "2"
+  }
+}
+</div>
+`;
+
+exports[`withFlag() tests uses default entity if not provided 1`] = `
+<div>
+  {
+  "loading": false,
+  "flags": {}
+}
+</div>
+`;

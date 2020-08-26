@@ -13,7 +13,7 @@ jobs:
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: "12.x"
       - name: Get yarn cache
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -26,4 +26,4 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile --network-concurrency 1
       - name: Lint, Test, Build
-        run: yarn build && yarn test
+        run: cd flagger-react && yarn build && yarn test
