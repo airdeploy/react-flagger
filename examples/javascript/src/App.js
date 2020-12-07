@@ -23,7 +23,7 @@ import {
 
 import "./App.css";
 
-const apiKey = "x17i1t1vf7m374ml"; // <--------- CHANGE THIS TO YOUR API KEY
+const apiKey = ""; // <--------- CHANGE THIS TO YOUR API KEY
 
 const flaggerConfig = {
   apiKey: apiKey,

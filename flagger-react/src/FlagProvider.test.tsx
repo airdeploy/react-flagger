@@ -58,6 +58,7 @@ describe('<FlagProvider> tests', () => {
     renderer.create(
       <FlagProvider apiKey={apiKey} sourceURL={sourceURL} entity={entity} />
     )
+    await renderer.act(() => wait(10))
 
     expect(Flagger.addFlaggerConfigUpdateListener).toBeCalledTimes(1)
   })
@@ -200,7 +201,7 @@ describe('<FlagProvider> tests', () => {
   })
 
   test('updates state on addFlaggerConfigUpdateListener callback', async () => {
-    Flagger.isConfigured = jest.fn(() => false)
+    Flagger.isConfigured = jest.fn(() => true)
     const childrenFn = jest.fn(() => null)
     // tslint:disable-next-line: no-empty
     let callback = (_config: any) => {}
@@ -214,7 +215,6 @@ describe('<FlagProvider> tests', () => {
         {childrenFn}
       </FlagProvider>
     )
-
     callback({})
 
     expect(childrenFn).toBeCalledTimes(2)

@@ -80,6 +80,7 @@ export class FlagProvider extends React.PureComponent<
         version: '__VERSION__',
       },
     })
+    Flagger.addFlaggerConfigUpdateListener(this.onFlaggerConfigUpdate)
   }
 
   protected onFlaggerConfigUpdate = (config: IFlaggerConfiguration) => {
@@ -91,8 +92,8 @@ export class FlagProvider extends React.PureComponent<
 
   public async componentDidMount() {
     this.unmounted = false
-    Flagger.addFlaggerConfigUpdateListener(this.onFlaggerConfigUpdate)
     if (Flagger.isConfigured()) {
+      Flagger.addFlaggerConfigUpdateListener(this.onFlaggerConfigUpdate)
       this.setState((s) => ({...s, loading: false}))
       return
     }

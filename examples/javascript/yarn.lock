@@ -4318,14 +4318,14 @@ find-up@^2.0.0, find-up@^2.1.0:
     locate-path "^2.0.0"
 
 "flagger-react@file:../../flagger-react":
-  version "3.0.6"
-  dependencies:
-    flagger "^3.0.7"
-
-flagger@^3.0.7:
   version "3.0.7"
-  resolved "https://registry.yarnpkg.com/flagger/-/flagger-3.0.7.tgz#76c8b4294531c33185e96cb8a2fa9985434cea9f"
-  integrity sha512-rH+1bHdJZ3ZJOWifNXYcWH8U/szvKrMmpXtHjX8eepdItSwdd/pJWU5/A2xoR2l89o/PWW3/Abm5i4aMH1dHJQ==
+  dependencies:
+    flagger "^3.0.9"
+
+flagger@^3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/flagger/-/flagger-3.0.9.tgz#e4f1aa472e00ac5046350374ba259eb9228f2e0b"
+  integrity sha512-1h3N+31/HA328zZsX9knEO7m7xWAP8i4dEkIayxczVqPfSsvxrCl+QUky+NzLHgVAby4U8B4gYWhKSzPiw0p3Q==
   dependencies:
     axios "^0.18.0"
     axios-retry "^3.1.2"
