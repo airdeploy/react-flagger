@@ -1,18 +1,14 @@
-import Flagger from 'flagger'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
 import {flaggerCtx} from './contexts'
 import {useFlag, useVariation} from './index'
 
-jest.mock('flagger')
-
 const ViewJson = (props: any) => <div>{JSON.stringify(props, null, 2)}</div>
 
 describe('hooks.ts tests', () => {
-  beforeEach(async () => {
-    jest.clearAllMocks()
-    ;(Flagger as any).mockClear()
+  beforeAll(async () => {
+    jest.mock('flagger')
   })
 
   afterAll(async () => {

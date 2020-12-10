@@ -4,8 +4,6 @@ import renderer from 'react-test-renderer'
 
 import {FlagProvider} from './index'
 
-jest.mock('flagger')
-
 const wait = (ms: number): Promise<void> =>
   new Promise((res) => {
     setTimeout(res, ms)
@@ -15,9 +13,12 @@ const sourceURL = 'http://someserver.com/'
 const apiKey = 'onz2150xjon6pkjr'
 
 describe('<FlagProvider> tests', () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
+    jest.mock('flagger')
+  })
+
+  beforeEach(() => {
     jest.clearAllMocks()
-    ;(Flagger as any).mockClear()
   })
 
   afterAll(async () => {
@@ -26,6 +27,8 @@ describe('<FlagProvider> tests', () => {
 
   test("calls Flagger.init() if it's not initialized", async () => {
     Flagger.isConfigured = jest.fn(() => false)
+    Flagger.init = jest.fn(() => Promise.resolve())
+
     const initSpy = jest.spyOn(Flagger, 'init')
     const entity = {id: '1'}
 
@@ -52,6 +55,7 @@ describe('<FlagProvider> tests', () => {
 
   test('subscribes to FlaggerConfigUpdate event on mount', async () => {
     Flagger.isConfigured = jest.fn(() => false)
+    Flagger.init = jest.fn(() => Promise.resolve())
     Flagger.addFlaggerConfigUpdateListener = jest.fn()
     const entity = {id: '1'}
 

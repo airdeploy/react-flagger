@@ -1,22 +1,17 @@
-import Flagger, {Logger} from 'flagger'
+import {Logger} from 'flagger'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
 import {flaggerCtx} from './contexts'
 import {withFlag} from './index'
 
-jest.mock('flagger')
-
 function TestComponent(props: any) {
   return <div>{JSON.stringify(props, null, 2)}</div>
 }
 
 describe('withFlag() tests', () => {
-  beforeAll(async () => {})
-
-  beforeEach(async () => {
-    jest.clearAllMocks()
-    ;(Flagger as any).mockClear()
+  beforeAll(async () => {
+    jest.mock('flagger')
   })
 
   afterAll(async () => {

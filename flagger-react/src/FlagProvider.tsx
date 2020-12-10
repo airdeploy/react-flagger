@@ -1,4 +1,4 @@
-import {Flagger} from 'flagger'
+import Flagger, {LogLevel} from 'flagger'
 import {IEntity, IFlaggerConfiguration} from 'flagger/types/Types'
 import React from 'react'
 
@@ -10,7 +10,7 @@ export type IFlagProviderProps = {
   backupSourceURL?: string
   sseURL?: string
   ingestionURL?: string
-  logLevel?: 'warn' | 'warning' | 'deb' | 'debug' | 'err' | 'error'
+  logLevel?: LogLevel
   entity?: IEntity
   loadingView: JSX.Element
 } & (

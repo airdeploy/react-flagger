@@ -1,15 +1,16 @@
-import Flagger, {Logger} from 'flagger'
+import {Logger} from 'flagger'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
 import {Flag, FlagSwitch, Variation} from './index'
 
-jest.mock('flagger')
-
 describe('Flag.ts tests', () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
+    jest.mock('flagger')
+  })
+
+  beforeEach(() => {
     jest.clearAllMocks()
-    ;(Flagger as any).mockClear()
   })
 
   afterAll(async () => {

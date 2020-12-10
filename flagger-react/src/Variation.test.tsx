@@ -1,17 +1,13 @@
-import Flagger, {Logger} from 'flagger'
+import {Logger} from 'flagger'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
 import {Variation} from './index'
 
-jest.mock('flagger')
-
 describe('Variation.ts tests', () => {
-  beforeEach(async () => {
-    jest.clearAllMocks()
-    ;(Flagger as any).mockClear()
+  beforeAll(async () => {
+    jest.mock('flagger')
   })
-
   afterAll(async () => {
     jest.clearAllMocks()
   })
