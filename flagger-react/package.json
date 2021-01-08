@@ -1,6 +1,6 @@
 {
   "name": "flagger-react",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "description": "An open source React SDK for feature flagging (feature gating, feature toggles)",
   "main": "dist/react.js",
   "types": "./types",
@@ -17,7 +17,7 @@
   "author": "engineering@airdeploy.io",
   "license": "MIT",
   "dependencies": {
-    "flagger": "^3.0.11"
+    "flagger": "^3.0.14"
   },
   "peerDependencies": {
     "@types/react": "^16.9.46",

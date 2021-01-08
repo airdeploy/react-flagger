@@ -1840,10 +1840,10 @@ find-versions@^3.2.0:
   dependencies:
     semver-regex "^2.0.0"
 
-flagger@^3.0.11:
-  version "3.0.11"
-  resolved "https://registry.yarnpkg.com/flagger/-/flagger-3.0.11.tgz#4a9d21e3e458c3df8ea9c0b07be81191b95a6fb5"
-  integrity sha512-FBCRt9dz2LpHfhqSN2u8NL+NYCIsxKbG8DK44LrW12JYkjTaWVIWlr1MVsBL1Uwezgn5LnjPVYQiJ881PAM5rA==
+flagger@^3.0.14:
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/flagger/-/flagger-3.0.14.tgz#122cd62cd1de51269f5348ed88f126c975a7d3bc"
+  integrity sha512-El0vNXsg5HuZ+z6mPt6rtnpn65V5jf8jNJwK6Pm86OlISEV8bwGWO4LViQFTeQllkCpKHoDTe5lhLQ8cWeU97w==
   dependencies:
     axios "^0.18.0"
     axios-retry "^3.1.2"
