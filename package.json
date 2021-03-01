@@ -1,6 +1,6 @@
 {
   "name": "flagger-react",
-  "version": "3.0.7",
+  "version": "3.0.10",
   "description": "An open source React SDK for feature flagging (feature gating, feature toggles)",
   "main": "lib/dist/react.js",
   "repository": "git@github.com:airdeploy/flagger-react.git",

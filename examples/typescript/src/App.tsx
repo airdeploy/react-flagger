@@ -1,4 +1,4 @@
-import {IEntity} from 'flagger'
+import { IEntity, LogLevel } from "flagger"
 import {
   Flag,
   FlagProvider,
@@ -232,7 +232,7 @@ export const Root = () => {
       <FlagProvider
         apiKey={config.apiKey}
         entity={entity || undefined}
-        logLevel="debug"
+        logLevel={LogLevel.deb}
         loadingView={<AppSpinner />}>
         <App />
       </FlagProvider>
